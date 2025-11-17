@@ -1,1 +1,0 @@
-SELECT * FROM OrdemServico WHERE idTeam = 1 AND Status = 'Finalizado';
