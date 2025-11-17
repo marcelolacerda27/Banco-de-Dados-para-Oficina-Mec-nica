@@ -1,0 +1,8 @@
+SELECT 
+    OS.idOrder,
+    C.Nome AS Cliente, 
+    (IFNULL(Servicos.Total, 0) + IFNULL(Pecas.Total, 0)) AS Valor_Final
+FROM OrdemServico OS
+JOIN Veiculo V ON OS.idVehicle = V.idVehicle
+JOIN Cliente C ON V.idClient = C.idClient
+-- (Joins completos no arquivo .sql)
